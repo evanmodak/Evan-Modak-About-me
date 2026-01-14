@@ -125,6 +125,17 @@ export default function App() {
         {getExperience()}
         {getProjects()}
         {getInterests()}
+        <section>
+  <h2 className="text-xl font-semibold mb-2">Computer Science Interests</h2>
+  <p className="text-sm">
+    I’m especially interested in systems-oriented computer science, including
+    low-level software, performance-conscious programming, and how software
+    interacts with hardware. I enjoy working close to the machine—whether that’s
+    embedded systems, firmware, or building efficient software from first
+    principles—and I’m actively exploring areas like operating systems,
+    networking, and machine learning through coursework and projects.
+  </p>
+</section>
 
         <footer className="pt-6 border-t text-sm text-gray-500">
           © {new Date().getFullYear()} by Evan Modak
