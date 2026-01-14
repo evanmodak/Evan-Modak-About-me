@@ -128,12 +128,8 @@ export default function App() {
         <section>
   <h2 className="text-xl font-semibold mb-2">Computer Science Interests</h2>
   <p className="text-sm">
-    I’m especially interested in systems-oriented computer science, including
-    low-level software, performance-conscious programming, and how software
-    interacts with hardware. I enjoy working close to the machine—whether that’s
-    embedded systems, firmware, or building efficient software from first
-    principles—and I’m actively exploring areas like operating systems,
-    networking, and machine learning through coursework and projects.
+  I’m especially interested in software development and machine learning, with a focus on building practical, scalable applications. I enjoy designing and implementing clean, efficient software and exploring how data driven models can be applied to real world problems. Through coursework and projects, I’m actively developing skills in modern software engineering and applied machine learning.
+  
   </p>
 </section>
 
