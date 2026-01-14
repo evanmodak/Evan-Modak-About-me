@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dynamic-bg {
+  background: linear-gradient(
+    -45deg, #a5e7f0, #a1afeb, #f0a0e5, #b6f0cc, #94e5f0
+  );
+  background-size: 700% 700%;
+  animation: gradientMove 30s ease infinite;
+}
+
+html, body, #root {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
