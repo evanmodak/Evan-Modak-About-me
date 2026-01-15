@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
 
+import React, { useState } from "react";
 
 function CurrentWork() {
   const [showPreview, setShowPreview] = useState(false);
@@ -137,16 +138,19 @@ export default function App() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="fixed top-4 right-4 z-50">
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-800 text-black dark:text-white shadow-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
-        >
-          {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        </button>
-      </div>
+      <div className="fixed top-4 right-4 z-50">
+  <button
+    onClick={() => setDarkMode(!darkMode)}
+    className="px-4 py-2 rounded-md shadow-lg transition-colors duration-300 dark-mode-btn"
+  >
+    {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+  </button>
+</div>
+</div>
 
       <div className="min-h-screen font-sans bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
-        <main className="max-w-3xl px-12 pt-40 pb-24 space-y-10 bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-2xl shadow-xl transition-colors duration-500">
+        <main className="panel max-w-3xl px-12 pt-40 pb-24 space-y-10 
+                 backdrop-blur-md rounded-2xl shadow-xl transition-colors duration-500">
           <header className="space-y-3">
             <h1 className="text-3xl font-bold">Hello! My name is Evan Modak</h1>
             <Hero />

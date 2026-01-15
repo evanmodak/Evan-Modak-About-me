@@ -8,13 +8,14 @@
   100% { background-position: 0% 50%; }
 }
 
-.dynamic-bg {
-  background: linear-gradient(
-    -45deg, #a5e7f0, #a1afeb, #f0a0e5, #b6f0cc, #94e5f0
-  );
-  background-size: 700% 700%;
-  animation: gradientMove 30s ease infinite;
+
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-300px) translateX(50px); }
+  100% { transform: translateY(0) translateX(0); }
 }
+
 
 html, body, #root {
   margin: 0%;
@@ -24,4 +25,45 @@ html, body, #root {
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+}
+body, .min-h-screen {
+  background-color: #f3f4f6; 
+  color: #1f2937;
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #1f2937;
+}
+
+.dark body, 
+.dark .min-h-screen {
+  background-color: #000000; 
+  color: #f3f4f6; 
+}
+
+.dark .panel {
+  background-color: rgba(43, 42, 42, 0.9); 
+  color: #f3f4f6;
+}
+
+
+a {
+  color: #1d4ed8; 
+}
+.dark a {
+  color: #3b82f6; 
+}
+
+
+.dark-mode-btn {
+  background-color: #e5e7eb; 
+  color: #000;
+}
+.dark .dark-mode-btn {
+  background-color: #1f2937; 
+  color: #f3f4f6;
+}
+.dark-mode-btn:hover {
+  opacity: 0.8;
 }
