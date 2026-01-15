@@ -3,6 +3,34 @@ import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
 
+import React, { useState } from "react";
+
+function CurrentWork() {
+  const [showPreview, setShowPreview] = useState(false);
+
+  return (
+    <div className="my-6">
+            <br/>
+      <button
+        onClick={() => setShowPreview(!showPreview)}
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+      >
+        {showPreview ? "Hide Current Project" : "Click here to see what I'm currently working on!"}
+      </button>
+      {showPreview && (
+        <div className="mt-4 p-4 bg-white/20 backdrop-blur-md rounded shadow-md text-gray-100">
+          <h3 className="font-semibold text-lg mb-2">Current Project:</h3>
+          <p>
+          I’m currently building a car price prediction model using TensorFlow, leveraging realworld datasets to automate the estimation of vehicle values. It’s a hands on mix of data, machine learning, and predictive modeling, which makes it both practical and exciting!
+          </p>
+        </div>
+      )} 
+    </div>
+  );
+}
+
+export default CurrentWork;
+
 function getEmail() {
   return (
     <div className="flex flex-wrap gap-4 text-sm">
@@ -124,14 +152,16 @@ export default function App() {
 
         {getExperience()}
         {getProjects()}
+        {CurrentWork()}
+        <br/>
         {getInterests()}
         <section>
   <h2 className="text-xl font-semibold mb-2">Computer Science Interests</h2>
   <p className="text-sm">
   I’m especially interested in software development and machine learning, with a focus on building practical, scalable applications. I enjoy designing and implementing clean, efficient software and exploring how data driven models can be applied to real world problems. Through coursework and projects, I’m actively developing skills in modern software engineering and applied machine learning.
-  
   </p>
 </section>
+
 
         <footer className="pt-6 border-t text-sm text-gray-500">
           © {new Date().getFullYear()} by Evan Modak
