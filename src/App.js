@@ -3,6 +3,7 @@ import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
 
+
 function CurrentWork() {
   const [showPreview, setShowPreview] = useState(false);
 
@@ -131,38 +132,51 @@ function Hero() {
 }
 
 export default function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="min-h-screen font-sans dynamic-bg text-white">
-      <main className="max-w-3xl px-12 pt-40 pb-24 space-y-10 bg-white/20 backdrop-blur-md rounded-2xl shadow-xl">
-        <header className="space-y-3">
-          <h1 className="text-3xl font-bold">Hello! My name is Evan Modak</h1>
-          <Hero />
-          <p className="text-gray-700">
-            I’m a first year computer science student at Arizona State University.  I’m passionate about systems in school, sports, and life. I have played tennis my whole life and recently I have gotten more into basketball. I've worked as a tennis coach during the summer and built teamwork and leadership skills. I’m always looking to expand my technical skill set, with a focus on software and firmware development, machine learning, and building scalable, efficient systems through hands on projects and continuous learning.
-          </p>
-          <p className="text-gray-600 flex items-center gap-2 text-sm">
-            <MapPin size={16} /> San Francisco Bay Area
-          </p>
-          {getEmail()}
-        </header>
+    <div className={darkMode ? "dark" : ""}>
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-800 text-black dark:text-white shadow-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+        >
+          {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </button>
+      </div>
 
-        {getExperience()}
-        {getProjects()}
-        {CurrentWork()}
-        <br/>
-        {getInterests()}
-        <section>
-  <h2 className="text-xl font-semibold mb-2">Computer Science Interests</h2>
-  <p className="text-sm">
-  I’m especially interested in software development and machine learning, with a focus on building practical, scalable applications. I enjoy designing and implementing clean, efficient software and exploring how data driven models can be applied to real world problems. Through coursework and projects, I’m actively developing skills in modern software engineering and applied machine learning.
-  </p>
-</section>
+      <div className="min-h-screen font-sans bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+        <main className="max-w-3xl px-12 pt-40 pb-24 space-y-10 bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-2xl shadow-xl transition-colors duration-500">
+          <header className="space-y-3">
+            <h1 className="text-3xl font-bold">Hello! My name is Evan Modak</h1>
+            <Hero />
+            <p>
+              I’m a first year computer science student at Arizona State University. I’m passionate about systems in school, sports, and life. I have played tennis my whole life and recently got more into basketball. I've worked as a tennis coach during the summer and built teamwork and leadership skills. I’m always looking to expand my technical skill set.
+            </p>
+            <p className="flex items-center gap-2 text-sm">
+              <MapPin size={16} /> San Francisco Bay Area
+            </p>
+            {getEmail()}
+          </header>
 
+          {getExperience()}
+          {getProjects()}
+          {CurrentWork()}
+          <br />
+          {getInterests()}
 
-        <footer className="pt-6 border-t text-sm text-gray-500">
-          © {new Date().getFullYear()} by Evan Modak
-        </footer>
-      </main>
+          <section>
+            <h2 className="text-xl font-semibold mb-2">Computer Science Interests</h2>
+            <p>
+              I’m especially interested in software development and machine learning, with a focus on building practical, scalable applications. I enjoy designing and implementing clean, efficient software and exploring how data driven models can be applied to real world problems.
+            </p>
+          </section>
+
+          <footer className="pt-6 border-t text-sm text-gray-500 dark:text-gray-400">
+            © {new Date().getFullYear()} by Evan Modak
+          </footer>
+        </main>
+      </div>
     </div>
   );
 }
