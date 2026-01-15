@@ -3,6 +3,8 @@ import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
 
+import React, { useState } from "react";
+
 function CurrentWork() {
   const [showPreview, setShowPreview] = useState(false);
 
@@ -26,8 +28,6 @@ function CurrentWork() {
     </div>
   );
 }
-
-export default CurrentWork;
 
 function getEmail() {
   return (
@@ -118,9 +118,9 @@ function getInterests() {
 function Hero() {
   return (
     <h1>
-      I am a&nbsp;
+      I am a
       <Typewriter
-        words={["programmer", "creator", "artist", "student"]}
+        words={[" programmer", " creator", "n artist", " student"]}
         loop
         cursor
         cursorStyle="|"
