@@ -20,7 +20,7 @@ function CurrentWork() {
         <div className="mt-4 p-4 bg-white/20 backdrop-blur-md rounded shadow-md text-gray-100">
           <h3 className="font-semibold text-lg mb-2">Current Project:</h3>
           <p>
-          I’m currently building a car price prediction model using TensorFlow, leveraging realworld datasets to automate the estimation of vehicle values. It’s a hands on mix of data, machine learning, and predictive modeling, which makes it both practical and exciting!
+          I’m currently building a car price prediction model using PyTorch, leveraging realworld datasets to automate the estimation of vehicle values. It’s a hands on mix of data, machine learning, and predictive modeling, which makes it both practical and exciting!
           </p>
         </div>
       )} 
