@@ -3,6 +3,7 @@ import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
 
+
 function CurrentWork() {
   const [showPreview, setShowPreview] = useState(false);
 
@@ -19,7 +20,7 @@ function CurrentWork() {
         <div className="mt-4 p-4 bg-white/20 backdrop-blur-md rounded shadow-md text-gray-100">
           <h3 className="font-semibold text-lg mb-2">Current Project:</h3>
           <p>
-          I’m currently building a car price prediction model using TensorFlow, leveraging realworld datasets to automate the estimation of vehicle values. It’s a hands on mix of data, machine learning, and predictive modeling, which makes it both practical and exciting!
+          I’m developing a machine learning based tennis match outcome model that uses historical ATP data to predict win probabilities between professional players. The project emphasizes feature engineering, time aware validation, and probabilistic evaluation to ensure realistic and interpretable results.
           </p>
         </div>
       )} 
@@ -96,6 +97,17 @@ function getProjects() {
           </em>
         </div>
       </div>
+      <p>
+        <strong>
+        Predicting Next Day Aurora (AUR) Stock Prices Using Random Forest Regression
+        </strong>
+      </p>
+      <p>
+      Built a Random Forest machine learning model to predict next day closing prices using historical daily stock data (2022-2026).
+Engineered features such as price momentum, trading volume, moving averages (5/10/20 day), and short term volatility, and evaluated performance using Mean Absolute Error (MAE).
+Visualized predicted vs. actual prices to analyze model behavior during periods of market volatility, gaining insight into both strengths and limitations of ML based price forecasting.
+      </p>
+      <img src="https://media.licdn.com/dms/image/v2/D562DAQGV2f4VCNewUA/profile-treasury-image-shrink_800_800/B56ZvTOItPGQAY-/0/1768775258538?e=1769461200&v=beta&t=PEZutHB4ORyEmBoIHCKrVC9RlJrPeL5rX-5eTrldprQ" height="300"/>
     </section>
   );
 }
