@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Linkedin, MapPin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import "./style.css";
-
-import React, { useState } from "react";
 
 function CurrentWork() {
   const [showPreview, setShowPreview] = useState(false);
